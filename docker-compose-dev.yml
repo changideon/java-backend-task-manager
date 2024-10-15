@@ -1,0 +1,8 @@
+version: '4'
+services:
+  demo-app-db:
+    image: mongo:4.2.2
+    environment:
+      MONGO_INITDB_DATABASE: demo-app
+    ports:
+      - 27017:27017
