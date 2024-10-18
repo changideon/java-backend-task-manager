@@ -43,6 +43,7 @@ public class WebSecurityConfiguration {
                 http.csrf(csrf -> csrf
                         .ignoringRequestMatchers("/api/login")
                         .ignoringRequestMatchers("/api/todo")
+                        .ignoringRequestMatchers("/api/todo/**")
                         .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
                 );
 
